@@ -1,0 +1,10 @@
+{
+  "name": "web-monetization-react",
+  "version": "0.0.1",
+  "description": "React component/wrapper around web monetization",
+  "main": "index.js",
+  "repository": "https://github.com/theevilhead/web-monetization-react",
+  "author": "Girish Patil <girish@evilhead.me>",
+  "license": "MIT",
+  "private": true
+}
