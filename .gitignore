@@ -1,2 +1,3 @@
-node_modules
-yarn_error.log
+/**/lerna-debug.log
+/**/node_modules
+/**/yarn-error.log

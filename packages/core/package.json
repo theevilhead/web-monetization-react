@@ -1,0 +1,15 @@
+{
+  "name": "@evilhead/wmr-core",
+  "version": "0.0.1",
+  "description": "React component/wrapper around web monetization",
+  "main": "build/bundle.js",
+  "repository": "https://github.com/theevilhead/web-monetization-react",
+  "author": "Girish Patil <girish@evilhead.me>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"src/**/*.js\"",
+    "start": "webpack --watch --mode development",
+    "build": "webpack --mode production"
+  }
+}
