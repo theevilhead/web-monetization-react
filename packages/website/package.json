@@ -5,6 +5,7 @@
   "author": "Girish Patil <devegpat@gmail.com>",
   "homepage": "https://wmr.evilhead.me",
   "license": "MIT",
+  "private": true,
   "main": "dist",
   "directories": {
     "lib": "lib",
