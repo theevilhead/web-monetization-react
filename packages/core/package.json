@@ -1,6 +1,6 @@
 {
   "name": "@wmr/core",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.2-alpha.1",
   "description": "React component/wrapper around web monetization",
   "main": "build/bundle.js",
   "repository": "https://github.com/theevilhead/web-monetization-react",
