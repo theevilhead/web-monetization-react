@@ -1,5 +1,5 @@
 {
-  "name": "@evilhead/wmr-core",
+  "name": "@wmr/core",
   "version": "0.0.1",
   "description": "React component/wrapper around web monetization",
   "main": "build/bundle.js",
@@ -11,5 +11,8 @@
     "format": "prettier --write \"src/**/*.js\"",
     "start": "webpack --watch --mode development",
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
 }

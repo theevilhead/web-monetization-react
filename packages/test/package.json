@@ -1,5 +1,5 @@
 {
-  "name": "@evilhead/wmr-test",
+  "name": "@wmr/test",
   "version": "0.0.1",
   "description": "Documentation of Web Monetization React",
   "main": "src/index.js",
@@ -7,9 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@evilhead/wmr-core": "^0.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@wmr/core": "^0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

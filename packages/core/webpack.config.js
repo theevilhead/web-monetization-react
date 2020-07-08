@@ -19,6 +19,7 @@ module.exports = {
         use: ['babel-loader']
       }
     ]
-  }
+  },
+  externals: ['react','react-dom']
   // TODO: Add React and ReactDom as externals
 };

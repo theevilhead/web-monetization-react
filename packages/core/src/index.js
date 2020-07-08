@@ -1,9 +1,3 @@
-import React from 'react';
+import useWMR from './useWMR';
 
-export default function WMR() {
-  return (
-    <>
-      <h1>Web Monetization React</h1>
-    </>
-  );
-}
+export default useWMR;
