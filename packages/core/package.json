@@ -6,7 +6,6 @@
   "repository": "https://github.com/theevilhead/web-monetization-react",
   "author": "Girish Patil <girish@evilhead.me>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
     "start": "webpack --watch --mode development",
