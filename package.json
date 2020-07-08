@@ -1,5 +1,5 @@
 {
-  "name": "wmr",
+  "name": "web-monetization-react",
   "workspaces": [
     "packages/*"
   ],
@@ -11,8 +11,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start:core": "lerna run --scope @wmr/core start",
-    "start:test": "lerna run --scope @wmr/test start"
+    "start:core": "lerna run --scope web-monetization-react start",
+    "start:test": "lerna run --scope @web-monetization-react/test start"
   },
   "devDependencies": {
     "lerna": "^3.21.0",

@@ -1,5 +1,5 @@
 import React from 'react';
-import useWMR from '@wmr/core';
+import useWMR from '@web-monetization-react/core';
 
 export default function App() {
   const wmr = useWMR({

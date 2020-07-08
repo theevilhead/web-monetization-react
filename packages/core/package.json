@@ -1,7 +1,7 @@
 {
-  "name": "@wmr/core",
+  "name": "web-monetization-react",
   "version": "0.0.2-alpha.1",
-  "description": "React component/wrapper around web monetization",
+  "description": "A simple react module to manage web montization",
   "main": "build/bundle.js",
   "repository": "https://github.com/theevilhead/web-monetization-react",
   "author": "Girish Patil <girish@evilhead.me>",
@@ -15,5 +15,5 @@
   "dependencies": {
     "prop-types": "^15.7.2"
   },
-  "gitHead": "0d727f8fbaec8f58e048435b248d4c3e0033302b"
+  "gitHead": "7255545aadc3124aad6296dabec4c51f80e5da29"
 }
