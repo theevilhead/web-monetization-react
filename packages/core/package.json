@@ -14,5 +14,6 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2"
-  }
+  },
+  "gitHead": "190272b13259e492173e64ec399e1ad85c8b999f"
 }
