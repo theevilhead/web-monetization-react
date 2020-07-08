@@ -1,0 +1,97 @@
+{
+  "config": {
+    "title": "Web Monetization React",
+    "description": "",
+    "menu": [],
+    "version": "0.0.2-alpha.0",
+    "repository": "https://github.com/theevilhead/web-monetization-react",
+    "native": false,
+    "themeConfig": {},
+    "separator": "-",
+    "base": "/docs/",
+    "docs": "./pages",
+    "dest": "dist",
+    "propsParser": false,
+    "public": "/static",
+    "port": 3002
+  },
+  "entries": [
+    {
+      "key": "README.md",
+      "value": {
+        "id": "04c6e90faac2675aa89e2176d2eec7d8",
+        "filepath": "README.md",
+        "fullpath": "/Volumes/Vulture/Works/web-monetization-react/packages/docs/README.md",
+        "link": "https://github.com/theevilhead/web-monetization-react/edit/master/packages/docs/README.md",
+        "hidden": false,
+        "slug": "readme",
+        "route": "/readme",
+        "name": "Readme",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "docs",
+            "depth": 1,
+            "value": "docs"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "pages/about.mdx",
+      "value": {
+        "id": "804789f8b3b4cf8bcf8ef0ae49f71c87",
+        "filepath": "pages/about.mdx",
+        "fullpath": "/Volumes/Vulture/Works/web-monetization-react/packages/docs/pages/about.mdx",
+        "link": "https://github.com/theevilhead/web-monetization-react/edit/master/packages/docs/pages/about.mdx",
+        "hidden": false,
+        "slug": "pages-about",
+        "route": "/pages-about",
+        "name": "About",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "pages/index.mdx",
+      "value": {
+        "name": "Hello world",
+        "route": "/",
+        "id": "63823233e264ed6abbcc6f7ea0ef10bd",
+        "filepath": "pages/index.mdx",
+        "fullpath": "/Volumes/Vulture/Works/web-monetization-react/packages/docs/pages/index.mdx",
+        "link": "https://github.com/theevilhead/web-monetization-react/edit/master/packages/docs/pages/index.mdx",
+        "hidden": false,
+        "slug": "pages-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "hello-world",
+            "depth": 1,
+            "value": "Hello world"
+          }
+        ]
+      }
+    },
+    {
+      "key": "pages/know.mdx",
+      "value": {
+        "id": "dd82253f4f5db8360fc8da8da8bdbbb7",
+        "filepath": "pages/know.mdx",
+        "fullpath": "/Volumes/Vulture/Works/web-monetization-react/packages/docs/pages/know.mdx",
+        "link": "https://github.com/theevilhead/web-monetization-react/edit/master/packages/docs/pages/know.mdx",
+        "hidden": false,
+        "slug": "pages-know",
+        "route": "/pages-know",
+        "name": "Know",
+        "menu": "",
+        "headings": []
+      }
+    }
+  ]
+}
