@@ -1,5 +1,5 @@
 {
-  "name": "@wmr/core",
+  "name": "wmr",
   "version": "0.0.2-alpha.0",
   "description": "React component/wrapper around web monetization",
   "main": "build/bundle.js",

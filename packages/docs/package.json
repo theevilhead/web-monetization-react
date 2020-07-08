@@ -1,0 +1,26 @@
+{
+  "name": "@wmr/docs",
+  "version": "0.0.2-alpha.0",
+  "description": "Documentation for Web Monetization React",
+  "author": "Girish Patil <devegpat@gmail.com>",
+  "homepage": "https://wmr.evilhead.me/docs",
+  "license": "MIT",
+  "main": "lib/docs.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theevilhead/web-monetization-react.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/theevilhead/web-monetization-react/issues"
+  }
+}
