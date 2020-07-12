@@ -9,3 +9,6 @@
 Work in progress: DO NOT USE IT YET
 
 Simple react module to manage web monetization
+
+Bundle size
+https://bundlephobia.com/result?p=web-monetization-react
