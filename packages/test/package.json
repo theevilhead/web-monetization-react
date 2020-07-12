@@ -1,13 +1,13 @@
 {
   "name": "@web-monetization-react/test",
-  "version": "0.0.2-alpha.2",
+  "version": "0.0.2-alpha.3",
   "description": "Documentation of Web Monetization React",
   "main": "src/index.js",
   "author": "Girish Patil <girish@evilhead.me>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "web-monetization-react": "^0.0.2-alpha.2"
+    "web-monetization-react": "^0.0.2-alpha.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
