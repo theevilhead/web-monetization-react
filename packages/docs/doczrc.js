@@ -7,5 +7,12 @@ export default {
   description: '', // TODO
   propsParser: false, // Note: Important
   public: '/static',
-  port: 3002
+  port: 3002,
+  themeConfig: {
+    styles: {
+      h1: {
+        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      }
+    }
+  }
 }
