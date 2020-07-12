@@ -12,5 +12,8 @@
     "start": "webpack --watch --mode development",
     "build": "webpack --mode production"
   },
-  "gitHead": "7255545aadc3124aad6296dabec4c51f80e5da29"
+  "gitHead": "7255545aadc3124aad6296dabec4c51f80e5da29",
+  "devDependencies": {
+    "react": "^16.13.1"
+  }
 }
