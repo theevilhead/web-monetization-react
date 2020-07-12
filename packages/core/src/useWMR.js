@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import {
+  calculateAmount,
+  getMonetizationTag,
+  stopMonetization
+} from './utils';
 
 /**
  * Some setup instructions
@@ -22,49 +26,94 @@ export default function useWMR(props) {
     onStart = null,
     onStop = null,
     inProgress = null,
+    startOnLoad = false
   } = props;
 
-  const isMStateEnabled = typeof document.monetization !== 'undefined';
+  const isMStateEnabled = !!document.monetization;
   const mState = isMStateEnabled ? document.monetization.state : 'undefined';
 
-  const [currentMState, setMState] = useState(mState);
+  let globalConfig = { totalAmountPaid: 0 };
 
   if (!paymentPointer) {
     isDebug && console.log("Please provide payment pointer");
-    return null;
+    return;
   }
 
+  // isDebug && console.log("getMonetizationTag()", getMonetizationTag())
+
+  const getGlobalConfig = () => globalConfig;
+
+  const handleStatusChange = (e) => {
+    globalConfig = Object.assign(globalConfig, e.detail);
+    onStatusChange && onStatusChange(e, globalConfig);
+  }
+
+  const handleStart = (e) => {
+    console.log("asdasdsa", e)
+    globalConfig = Object.assign(globalConfig, e.detail);
+    onStart && onStart(e, globalConfig);
+  }
+
+  const handleStop = (e) => {
+    const formatedAmount = calculateAmount(globalConfig.totalAmountPaid, e.detail.assetScale)
+    onStop && onStop(e, formatedAmount);
+  }
+
+  const handleProgress = (e) => {
+    globalConfig.totalAmountPaid += Number(e.detail.amount);
+    const formatedAmount = calculateAmount(globalConfig.totalAmountPaid, e.detail.assetScale);
+    globalConfig = Object.assign(globalConfig, { totalAmount: formatedAmount });
+    inProgress && inProgress(e, globalConfig);
+  }
+
+  const attachListeners = () => {
+    document
+      .monetization
+      .addEventListener('monetizationpending', handleStatusChange)
+
+    document
+      .monetization
+      .addEventListener('monetizationstart', handleStart)
+
+    document
+      .monetization
+      .addEventListener('monetizationstop', handleStop)
+
+    document
+      .monetization
+      .addEventListener('monetizationprogress', handleProgress)
+  };
+
+  const startMonetization = (e) => {
+
+    if (!getMonetizationTag() && !paymentPointer) {
+      isDebug && console.log("Please provide a payment pointer to start monetization");
+      return;
+    }
+
+    if (!getMonetizationTag()) {
+      const meta = document.createElement('meta');
+      meta.setAttribute('name', 'monetization')
+      meta.setAttribute('content', paymentPointer)
+      document.head.appendChild(meta);
+      attachListeners();
+    }
+  };
+
   useEffect(() => {
+    if (startOnLoad) {
+      startMonetization();
+    } else {
+      attachListeners();
+    }
+  }, []);
 
-    document
-      .monetization
-      .addEventListener('monetizationpending', onStatusChange)
-
-    document
-      .monetization
-      .addEventListener('monetizationstart', onStart)
-    
-    document
-      .monetization
-      .addEventListener('monetizationstop', onStop)
-    
-    document
-      .monetization
-      .addEventListener('monetizationprogress', inProgress)
-    
-  })
-
-  return ({ 
+  return ({
+    hasPaid: (globalConfig.totalAmountPaid && globalConfig.totalAmountPaid > 0), // TODO
     isSupported: isMStateEnabled,
-    mState: mState,
-    isPaid: false, // TODO
-    totalAmount: 0 // TODO
+    startMonetization,
+    stopMonetization,
+    getGlobalConfig
   });
 
-}
-
-useWMR.propTypes = {
-  paymentPointer: PropTypes.string,
-  isDebug: PropTypes.bool,
-  onStatusChange: PropTypes.func
 }
