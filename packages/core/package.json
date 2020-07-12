@@ -1,6 +1,6 @@
 {
   "name": "web-monetization-react",
-  "version": "0.0.2-alpha.1",
+  "version": "0.0.2-alpha.2",
   "description": "A simple react module to manage web montization",
   "main": "build/bundle.js",
   "repository": "https://github.com/theevilhead/web-monetization-react",
