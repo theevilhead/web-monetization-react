@@ -1,44 +1,11 @@
+<!-- All references start -->
+[logo]: ./wmr-cover.png
+<!-- All references end -->
 
-  const showAdvertising = () => {
-    console.log("Show ads")
-  }
+![Web monetization react][logo]
 
-  const maybeShowAdvertising = () => {
-    console.log("Maybe")
-  }
+# Web Monetization React
 
-  if (document.monetization) {
-    document.monetization.addEventListener('monetizationstart', event => {
-      // User has an open payment stream
+Work in progress: DO NOT USE IT YET
 
-      // Connect to backend to validate the session using the request id
-      const { paymentPointer, requestId } = event.detail
-      if (!isValidSession(paymentPointer, requestId)) {
-        console.error('Invalid requestId for monetization')
-        showAdvertising()
-      }
-    })
-
-    document.monetization.addEventListener('monetizationprogress', event => {
-      // A payment has been received
-
-      // Connect to backend to validate the payment
-      const {
-        paymentPointer,
-        requestId,
-        amount,
-        assetCode,
-        assetScale
-      } = event.detail
-      if (
-        isValidPayment(paymentPointer, requestId, amount, assetCode, assetScale)
-      ) {
-        // Hide ads for a period based on amount received
-        suspendAdvertising(amount, assetCode, assetScale)
-      }
-    })
-    // Wait 30 seconds and then show ads if advertising is no longer suspended
-    setTimeout(maybeShowAdvertising, 3000)
-  } else {
-    showAdvertising()
-  }
+Simple react module to manage web monetization
